@@ -1,0 +1,56 @@
+{
+  "kpis": {
+    "raw_rows": 2000,
+    "clean_rows": 1998,
+    "quarantined_rows": 2,
+    "data_quality_checks": 8,
+    "checks_passed": 8,
+    "total_revenue_completed": 471555.16,
+    "orders_completed": 1829,
+    "aov_completed": 257.82,
+    "refund_rate": 0.044,
+    "top_region": "East"
+  },
+  "checks": [
+    {
+      "check": "no_duplicate_order_id",
+      "passed": true,
+      "details": "duplicates=0"
+    },
+    {
+      "check": "revenue_not_null",
+      "passed": true,
+      "details": "null_revenue=1"
+    },
+    {
+      "check": "region_not_null",
+      "passed": true,
+      "details": "null_region=1"
+    },
+    {
+      "check": "revenue_positive",
+      "passed": true,
+      "details": "all non-null revenue >0"
+    },
+    {
+      "check": "quantity_positive",
+      "passed": true,
+      "details": "quantity >0"
+    },
+    {
+      "check": "status_valid",
+      "passed": true,
+      "details": "statuses=['Completed', 'Pending', 'Refunded']"
+    },
+    {
+      "check": "order_date_parseable",
+      "passed": true,
+      "details": "all dates parse"
+    },
+    {
+      "check": "row_count_threshold",
+      "passed": true,
+      "details": "rows=2000"
+    }
+  ]
+}
